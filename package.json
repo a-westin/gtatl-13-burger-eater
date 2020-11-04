@@ -1,0 +1,25 @@
+{
+  "name": "gtatl-13-burger-eater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-westin/gtatl-13-burger-eater.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-westin/gtatl-13-burger-eater/issues"
+  },
+  "homepage": "https://github.com/a-westin/gtatl-13-burger-eater#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
