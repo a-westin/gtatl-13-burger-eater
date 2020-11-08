@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header text-center">
+        <h4>Go ahead, take a bite!</h4>
+    </div>
+    <div class="card-body">
+
+        {{#each uneatenList}}
+            <div>
+                <p>{{id}}.) {{burger_name}}
+                    <button class="btn btn-sm btn-outline-danger m-1 devour-btn float-right"
+                            data-burger="{{id}}">Devour<i class="fas fa-utensils ml-2"></i>
+
+
+                    </button>
+                </p>
+            </div>
+        {{/each }}
+
+    </div>
+</div>
