@@ -1,6 +1,6 @@
 // Establishing mysql connection
-var mysql = require("mysql");
-var connection;
+const mysql = require("mysql");
+const connection;
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
     });
   };
   
-  // Establishing the connection
+  // Logging whether the connection was successful or not
   connection.connect(function (err) {
     if (err) {
       console.error("Error connecting: " + err.stack);
