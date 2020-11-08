@@ -1,7 +1,7 @@
 const connection = require("../config/connection.js");
 
 function printQM(num) {
- const arr = [];
+ var arr = [];
 
   for (var i = 0; i < num; i++) {
     arr.push("?");
@@ -11,10 +11,10 @@ function printQM(num) {
 }
 
 function objectToSql(ob) {
- const arr = [];
+ var arr = [];
 
   for (var key in ob) {
-   const value = ob[key];
+   var value = ob[key];
     if (Object.hasOwnProperty.call(ob, key)) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
@@ -26,9 +26,9 @@ function objectToSql(ob) {
   return arr.toString();
 }
 
-const orm = {
+var orm = {
   all: function (tableInput, cb) {
-   const queryString = "SELECT * FROM " + tableInput + ";";
+   var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
@@ -37,7 +37,7 @@ const orm = {
     });
   },
   create: function (table, cols, vals, cb) {
-   const queryString = "INSERT INTO " + table;
+   var queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
@@ -57,7 +57,7 @@ const orm = {
     });
   },
   update: function (table, objColVals, condition, cb) {
-   const queryString = "UPDATE " + table;
+   var queryString = "UPDATE " + table;
 
     queryString += " SET ";
     queryString += objectToSql(objColVals);

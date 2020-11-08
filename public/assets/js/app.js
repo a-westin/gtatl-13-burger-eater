@@ -1,42 +1,36 @@
-const app = {
-    devourBurger: function (id) {
-        $.ajax({
-            url: `/api/burger/${id}`,
-            type: "PUT",
-            success: function () {
-                window.location.reload();
-            }
-        })
-    },
+$(function () {
+    $(".devour").on("click", function (event) {
+      const id = $(this).data("id");
+      const status = $(this).data("status");
+  
+      const newDevourStatus = {
+        devoured: status,
+      };
+      console.log(newDevourStatus);
+  
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: newDevourStatus,
+      }).then(function () {
+        console.log("changed devour status to ", status);
+        location.reload();
+      });
+    });
+  
+    $(".create-form").on("submit", function (event) {
+      event.preventDefault();
+  
+      const newBurger = {
+        name: $("#ca").val().trim(),
+      };
+  
+      $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger,
+      }).then(function () {
+        console.log("created new burger");
+        location.reload();
+      });
+    });
+  });
 
-    bindUIActions: function () {
-        $(".devour-btn").on("click", function () {
-            let id = $(this).attr("data-burger");
-            app.devourBurger(id);
-        });
-
-        $("#addBurger").on("click", function (e) {
-            e.preventDefault();
-            const data = {
-                name: $("#burgerName").val()
-            };
-            $.ajax({
-                type: "POST",
-                url: "api/burger",
-                data: data,
-                success: function (result) {
-                    console.log(result);
-                    window.location.reload();
-                }
-            });
-        });
-    },
-
-    init: function () {
-        this.bindUIActions();
-    }
-};
-
-$(document).ready(function() {
-   app.init();
-});
