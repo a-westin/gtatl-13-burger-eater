@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Choose a burger to eat, or add a new one!</h2>
+            {{> uneaten-burger }}
+        </div>
+        <div class="col">
+            <h2 class="text-center">These burgers are all gone!</h2>
+            {{> eaten-burger }}
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="New burger" id="newBurger">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button" id="addBurger">Add a burger!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
