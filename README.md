@@ -27,13 +27,7 @@
   
   If using the deployed version of the app, users can choose to 'eat' burgers that are in the left column by clicking on the red button. Once eaten, burgers will be moved to the right column and are no longer accessible. Otherwise, users can also choose to add a new burger to the list by typing a name into the form and clicking on the yellow button. 
   
-  ![Screen Shot 2020-11-08 at 7 53 22 PM](https://user-images.githubusercontent.com/69770137/98491258-42be9f80-2202-11eb-9b62-dc77044cbf95.png)
-
-  ![Screen Shot 2020-11-08 at 7 53 26 PM](https://user-images.githubusercontent.com/69770137/98491260-4520f980-2202-11eb-918c-84f7335944b2.png)
   
-  ![Screen Shot 2020-11-08 at 7 53 40 PM](https://user-images.githubusercontent.com/69770137/98491262-47835380-2202-11eb-9297-5e5ba11ed9bf.png)
-  
-  ![Screen Shot 2020-11-08 at 8 03 36 PM](https://user-images.githubusercontent.com/69770137/98491267-4a7e4400-2202-11eb-9d6a-66c5c0c53503.png)
 
   ******
 
